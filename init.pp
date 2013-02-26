@@ -1,4 +1,8 @@
-include 'git'
+
+class{git:
+      svn => false,
+      gui => false,
+    }
 
 package { 'bundler':
   ensure => installed,
