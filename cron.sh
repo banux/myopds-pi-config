@@ -1,5 +1,5 @@
 cd /root/myopds-pi-config
-git pull orgin master
+git pull origin master
 puppet --modulepath=/root/myopds-pi-config/modules/ apply /root/myopds-pi-config/init.pp
 cd /root/rails-opds-server/
 bundle exec rake db:migrate RAILS_ENV=production
