@@ -42,7 +42,7 @@ package { 'imagemagick':
 }
 
 git::repo{'rails-opds-server':
-	path   => '/root/rails-opds-server',
-	source => 'git://github.com/banux/rails-opds-server.git'
+	path   => '/root/rails-opds-server/',
+	source => 'git://github.com/banux/rails-opds-server.git',
 	branch => 'raspberry'
 }
