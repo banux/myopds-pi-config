@@ -68,7 +68,7 @@ define git::repo(
 			user 		=> root,
 			cwd			=> $path,
 			command => "${git::params::bin} checkout ${tag}",
-			unless	=> "${git::params::bin} describe --tag|/bin/grep -P '^${tag}$'",
+			unless	=> "${git::params::bin} describe --tag|grep -P '^${tag}$'",
 			require => Exec["git_repo_${name}"],
 			notify	=> File[$path],
 		}
@@ -77,7 +77,7 @@ define git::repo(
 			user 		=> root,
 			cwd			=> $path,
 			command => "${git::params::bin} checkout ${branch}",
-			unless	=> "${git::params::bin} branch|/bin/grep -P '^\\* ${branch}$'",
+			unless	=> "${git::params::bin} branch|grep -P '^\\* ${branch}$'",
 			require => Exec["git_repo_${name}"],
 			notify	=> File[$path],
 		}
