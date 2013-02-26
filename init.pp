@@ -1,3 +1,5 @@
+include 'git'
+
 package { 'bundler':
   ensure => installed,
   provider => 'gem'
@@ -37,4 +39,10 @@ package { 'make':
 
 package { 'imagemagick':
   ensure => installed
+}
+
+git::repo{'rails-opds-server':
+	path   => '/root/rails-opds-server',
+	source => 'git://github.com/banux/rails-opds-server.git'
+	branch => 'raspberry'
 }
