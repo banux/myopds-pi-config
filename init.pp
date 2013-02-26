@@ -1,4 +1,6 @@
 
+Exec { path => '/usr/bin:/bin:/usr/sbin:/sbin' }
+
 class{git:
       svn => false,
       gui => false,
