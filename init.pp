@@ -17,10 +17,6 @@ package { 'libxslt':
   ensure => installed
 }
 
-package { 'git':
-  ensure => installed
-}
-
 package { 'zip':
   ensure => installed
 }
